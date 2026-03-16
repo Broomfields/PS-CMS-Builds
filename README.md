@@ -1,6 +1,6 @@
 # PS-CMS-Builds
 
-This repo manages documentation and media for CAD design builds. Each build is a folder under `builds/` containing a Markdown file whose frontmatter is compiled into a release manifest, allowing the site to dynamically render project cards and build pages.
+Documentation and media for CAD design builds. Each build lives in its own folder under `builds/`, containing a Markdown file — the frontmatter gets compiled into a release manifest that the site uses to render project cards and build pages.
 
 ---
 
@@ -40,7 +40,7 @@ python .github/scripts/generate_manifest.py
 
 ## Image convention
 
-All images for a build live in an `images/` subdirectory inside the build folder:
+Images for a build go in an `images/` subfolder inside the build folder:
 
 ```
 builds/my-new-widget/
@@ -70,13 +70,13 @@ gallery:
     label: "Finished print on the bench"
 ```
 
-The manifest generator resolves bare names to full relative paths (e.g. `images/02-detail.jpeg`) at build time by scanning the `images/` subdirectory. A warning is printed if a name cannot be resolved.
+The manifest generator resolves bare names to full paths (e.g. `images/02-detail.jpeg`) by scanning the `images/` subfolder at build time. It'll warn if a name can't be resolved.
 
 ---
 
 ## Files convention
 
-All downloadable assets (STL, SCAD, etc.) for a build live in a `files/` subdirectory inside the build folder:
+Downloadable assets (STL, SCAD, etc.) for a build go in a `files/` subfolder inside the build folder:
 
 ```
 builds/my-new-widget/
@@ -103,13 +103,13 @@ files:
     label: "Part — OpenSCAD Source"
 ```
 
-The manifest generator resolves bare names to full relative paths (e.g. `files/01-part.stl`) at build time by scanning the `files/` subdirectory. A warning is printed if a name cannot be resolved.
+The manifest generator resolves bare names to full paths (e.g. `files/01-part.stl`) by scanning the `files/` subfolder at build time. It'll warn if a name can't be resolved.
 
 ---
 
 ## Frontmatter field reference
 
-All fields are written in the YAML frontmatter block at the top of the main page Markdown file.
+All fields go in the YAML frontmatter block at the top of the main page Markdown file.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
@@ -179,7 +179,7 @@ In the manifest, each entry is resolved to `{ "src": "files/01-part.stl", "label
 
 ## Sub-pages
 
-A build can have one or more sub-pages for supplementary content (print settings, design notes, etc.).
+Builds can have sub-pages for supplementary content — print settings, design notes, that sort of thing.
 
 **Convention:**
 
@@ -208,4 +208,4 @@ parent: "my-build"
 See [Print Settings](print-settings) for the layer config.
 ```
 
-The site consumer intercepts relative links (no protocol, no leading slash) and routes them to sub-page components rather than rendering a plain `<a>` tag.
+The site intercepts relative links (no protocol, no leading slash) and routes them to sub-page components instead of rendering a plain `<a>` tag.

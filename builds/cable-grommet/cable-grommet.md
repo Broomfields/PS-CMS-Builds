@@ -9,7 +9,7 @@ gallery:
     label: "Cable Grommet — Base model study"
   - name: "02-grommet-lid"
     label: "Cable Grommet Lid — Detailed view of the cap and slot"
-tags: ["openscad", "3d-printing", "office-utility", "organization"]
+tags: ["openscad", "3d-printing", "office-utility", "organisation"]
 cad_tool: "OpenSCAD"
 status: "complete"
 license: "CC BY-SA 4.0"
@@ -24,9 +24,13 @@ files:
     label: "Grommet Lid — STL"
 ---
 
-After seeing the workshop team use 3D printers to create COVID-19 desk dividers and standard cable grommets for the office, I noticed the existing models didn't quite fit my specific desk requirements. I designed this custom version to better suit my cable management needs.
+The workshop team had a 3D printer going for COVID desk dividers and had knocked out a few cable grommets for the office while they were at it. The hole circumference wasn't really the issue — you can just scale that. What I needed was specific geometry: a deeper sleeve below the desk surface to push cables down before they exit out to the side, and a taller profile sitting above it. None of the existing models had that.
+
+So I just made my own.
 
 ## Design
 
-The grommet is a two-part assembly consisting of a main sleeve and a removable lid. The sleeve is designed to fit snugly into a pre-drilled desk hole, while the lid features a cable pass-through slot. I provided the workshop team with these models, which they printed for use at my workstation.
+It's a two-part setup. The sleeve drops into the desk hole with enough depth underneath to redirect cables downward before they exit sideways. The lid sits on top with a slot cut through it for the cables. Nothing complicated — just the right geometry for once.
+
+I handed the files over to the workshop team and they printed them for my workstation.
 

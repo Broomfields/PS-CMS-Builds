@@ -42,11 +42,13 @@ files:
     label: "Bracket Study — OpenSCAD Source"
 ---
 
-The rocket we were launching was designed for larger booster motors than we could get locally. Rather than redesign the whole chassis, I modelled a custom two-part motor mount to hold the smaller available boosters securely in their place.
+Here's the situation: the rocket was built for bigger motors than we could actually source locally. Not ideal when you're trying to, y'know, launch the thing. Rather than tear apart the whole chassis and start over, I figured the smarter move was a custom mount that could hold the smaller boosters we *could* get.
 
 See [Print Settings](print-settings) for slicer configuration.
 
 ## Design
 
-The mount is a two-part assembly. The bracket is a flat cylinder with two bored holes sized for the booster casings. The base is the same geometry but adds a retaining lip at one end — the boosters push against it under thrust so they can't travel through the mount. Both parts share a common variables file so booster dimensions only need updating in one place.
+The mount is two parts. The cap braces the top of the boosters and holds them in the bracket. The brace handles the bottom and doubles as the rocket base, with a retaining lip at one end so the boosters can't travel through under thrust.
+
+Both parts share a common variables file, so if the booster dimensions ever need changing you only have to update them in one place. Worth it.
 
